@@ -17,7 +17,7 @@ h1 {
 
 /* Portada */
 #portada {
-    background: url('../assets/imagenes/desktop/portadaAyE-desktop.jpg') no-repeat center center/cover;
+    background: url('./assets/imagenes/desktop/portadaAyE-desktop.jpg') no-repeat center center/cover;
     height: 100vh;
     display: flex;
     justify-content: flex-end; /* Alinea el texto a la base */
@@ -42,7 +42,7 @@ h1 {
 /* Media Queries para dispositivos móviles */
 @media (max-width: 768px) {
     #portada {
-        background: url('../assets/imagenes/movil/portadaAyE-movil.jpg') no-repeat center center/cover;
+        background: url('./assets/imagenes/movil/portadaAyE-movil.jpg') no-repeat center center/cover;
         height: 100vh;
     }
 
