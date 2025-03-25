@@ -143,3 +143,34 @@ a:hover {
 .cuenta-regresiva.solo-horas .dias {
     display: none;
 }
+
+/* Media Queries para dispositivos móviles */
+@media (max-width: 768px) {
+    .cuenta-regresiva {
+        padding: 10px;  /* Reducir padding para ajustarse mejor en móviles */
+        gap: 10px;  /* Reducir espacio entre los elementos */
+    }
+
+    .valor-dias {
+        font-size: 4rem;  /* Reducir tamaño de los días */
+    }
+
+    .unidad-dias {
+        font-size: 2rem;  /* Reducir tamaño de la unidad de días */
+    }
+
+    .linea-tiempo {
+        gap: 10px;  /* Reducir espacio entre horas, minutos y segundos */
+        font-size: 2rem;  /* Reducir tamaño de las unidades (horas, minutos, segundos) */
+    }
+
+    .linea-tiempo .unidad {
+        font-size: 1.5rem;  /* Reducir tamaño de las unidades (horas, minutos, segundos) */
+    }
+
+    .valor-horas,
+    .valor-minutos,
+    .valor-segundos {
+        font-size: 3rem;  /* Reducir tamaño de las horas, minutos y segundos */
+    }
+}
