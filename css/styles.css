@@ -6,31 +6,6 @@ body {
     color: #333; /* Color del texto */
 }
 
-
-/* Configurar el título con la fuente Parisienne */
-/* Efecto de escritura */
-.animated-text {
-    display: inline-block;
-    white-space: normal; /* Asegura que haya espacios entre las palabras */
-    overflow: hidden;
-    border-right: .1em solid #ac8a51; /* Color del cursor de escritura */
-    width: 0;
-    animation: typing 3s steps(30) forwards;
-}
-
-@keyframes typing {
-    to {
-        width: 100%;
-    }
-}
-
-@keyframes blink {
-    50% {
-        border-color: transparent;
-    }
-}
-
-
 /* Ajustes adicionales */
 h1, h2, h3, p {
     font-weight: 300; /* Peso más ligero para el resto de los textos */
@@ -40,24 +15,50 @@ h1 {
     font-weight: 600; /* Peso más pesado para los títulos principales */
 }
 
-
 /* Portada */
 #portada {
-    background: url('../assets/imagenes/portada-AyE1200x710.jpg') no-repeat center center/cover;
+    background: url('./assets/imagenes/desktop/portadaAyE-desktop.jpg') no-repeat center center/cover;
     height: 100vh;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: flex-end; /* Alinea el texto a la base */
+    align-items: center;   /* Coloca el texto en la base de la portada */
     color: white;
     text-align: center;
+    padding: 0 20px; /* Añade padding para no tocar el borde */
 }
 
 #portada h1 {
-    font-size: 70px;
+    font-size: 100px; /* Ajuste del tamaño del texto */
+    font-family: 'Parisienne', cursive; /* Mantener la tipografía */
+    color: #ac8a51; /* Color blanco */
+    margin-bottom: 20px; /* Ajuste para que quede a 20px del borde inferior */
 }
 
 #portada p {
     font-size: 1.5rem;
+    font-family: 'Raleway', sans-serif;
+}
+
+/* Media Queries para dispositivos móviles */
+@media (max-width: 768px) {
+    #portada {
+        background: url('./assets/imagenes/movil/portadaAyE-movil.jpg') no-repeat center center/cover;
+        height: 100vh;
+    }
+
+    #portada h1 {
+        font-size: 50px; /* Ajustamos el tamaño del título para pantallas pequeñas */
+        margin-bottom: 20px; /* Se mantiene la distancia en pantallas pequeñas */
+    }
+
+    #portada p {
+        font-size: 1rem; /* Ajustamos el tamaño del subtítulo para pantallas pequeñas */
+    }
+
+    /* Ajustes de márgenes y paddings para pantallas pequeñas */
+    section {
+        padding: 1rem;
+    }
 }
 
 /* Estilos para los componentes */
@@ -88,35 +89,57 @@ a:hover {
     color: #ac8a51; /* Dorado */
 }
 
-/* Aplicar la fuente Parisienne al título */
-.animated-text {
+
+/* Estilos para la cuenta regresiva */
+.cuenta-regresiva {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.2); /* Fondo translúcido */
+    padding: 15px;
+    border-radius: 10px;
+    color: #00151e; /* Azul intenso */
+    font-family: 'Raleway', sans-serif;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.dias {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.valor-dias {
+    font-size: 8rem;  /* Tamaño duplicado */
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #00151e; /* Azul intenso */
+}
+
+.unidad-dias {
+    font-size: 3.6rem;  /* Tamaño duplicado */
     font-family: 'Parisienne', cursive;
-    font-size: 1px; /* Ajusta el tamaño de la fuente según tu preferencia */
-    letter-spacing: 1px; /* Añadir un poco de espacio entre las letras para darle un toque más delicado */
+}
+
+.linea-tiempo {
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 20px;
+    font-size: 3rem;  /* Tamaño duplicado */
+    font-weight: bold;
+    color: #e2e2e2; /* Azul intenso */
 }
 
-
-/* Definimos la animación de escritura */
-@keyframes escribir {
-    to {
-        width: 100%; /* Aumenta el ancho hasta el 100% para mostrar todo el texto */
-    }
+.linea-tiempo .unidad {
+    font-weight: 300;
+    margin-left: 5px;
+    font-size: 2rem;  /* Tamaño duplicado */
 }
 
-/* Estilo para el content box detrás del título */
-.content-box {
-    position: absolute;
-    background: rgba(0, 0, 0, 0.5); /* Fondo translúcido (50% opaco) */
-    padding: 20px;
-    border-radius: 10px;
-    max-width: 80%; /* Limitar el ancho */
-    margin: 0 auto;
-    text-align: center;
-    z-index: 1; /* Asegura que el contenido esté por encima del fondo */
+.cuenta-regresiva.solo-horas .dias {
+    display: none;
 }
-
-
-

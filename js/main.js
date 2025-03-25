@@ -1,8 +1,15 @@
-import { createPortada } from './js/portada.js';
-import { createTimeline } from './js/timeline.js';
-import { createRSVP } from './js/rsvp.js';
-import { createGaleria } from './js/galeria.js';
-import { createRegalos } from './js/regalos.js';
+import { createPortada } from './portada.js';
+import { createCuentaRegresiva } from './cuenta-regresiva.js';
+
+// Agrega la cuenta regresiva en el contenedor adecuado
+const cuentaRegresivaElemento = createCuentaRegresiva();
+document.querySelector('#portada .content-box').appendChild(cuentaRegresivaElemento);
+
+
+import { createTimeline } from './timeline.js';
+import { createRSVP } from './rsvp.js';
+import { createGaleria } from './galeria.js';
+import { createRegalos } from './regalos.js';
 
 // Cargar los componentes en sus respectivas secciones
 document.getElementById('portada').appendChild(createPortada());

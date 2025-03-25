@@ -7,14 +7,10 @@ export function createPortada() {
     const contentBox = document.createElement('div');
     contentBox.classList.add('content-box');
     
-    // Separamos el texto en letras individuales
-    const text = "Boda Angie y Errol";
-    const letters = text.split('').map(letter => `<span class="animated-letter">${letter}</span>`).join('');
-    
-    contentBox.innerHTML = `
-        <h1 class="animated-text">${letters}</h1>
-        <p>29 de Mayo 2026</p>
-    `;
+    // Texto de la portada, solo el título
+    /* contentBox.innerHTML = `
+        <h1>¡Nos casamos!</h1>
+    `;*/
 
     // Añadimos el content box a la sección
     section.appendChild(contentBox);
